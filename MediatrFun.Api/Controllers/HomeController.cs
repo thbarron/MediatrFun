@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using Mediatr.Services.Models;
-using Mediatr.Services.Queries;
+using MediatrFun.Services.Books.Queries;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
