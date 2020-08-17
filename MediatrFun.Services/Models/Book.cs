@@ -1,4 +1,6 @@
 
+using System;
+
 namespace Mediatr.Services.Models
 {
   public class Book
