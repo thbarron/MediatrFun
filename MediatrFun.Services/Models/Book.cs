@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Mediatr.Services.Models
+namespace MediatrFun.Services.Models
 {
   public class Book
   {

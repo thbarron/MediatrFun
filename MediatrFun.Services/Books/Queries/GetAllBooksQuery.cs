@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using MediatR;
-using Mediatr.Services.Models;
+using MediatrFun.Services.Models;
 
 namespace MediatrFun.Services.Books.Queries
 {
