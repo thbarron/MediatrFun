@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MediatrFun.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200823202232_InitialCreate")]
+    [Migration("20200823231944_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

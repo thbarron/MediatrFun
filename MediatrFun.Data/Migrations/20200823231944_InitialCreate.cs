@@ -13,10 +13,10 @@ namespace MediatrFun.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    CreatedMoment = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    UpdatedMoment = table.Column<DateTime>(type: "TEXT", nullable: false),
                     FirstName = table.Column<string>(type: "TEXT", nullable: true),
-                    LastName = table.Column<string>(type: "TEXT", nullable: true)
+                    LastName = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedMoment = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedMoment = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,9 +29,9 @@ namespace MediatrFun.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
                     CreatedMoment = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    UpdatedMoment = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: true)
+                    UpdatedMoment = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
