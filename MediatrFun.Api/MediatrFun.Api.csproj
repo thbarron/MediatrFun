@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MediatrFun.Data\MediatrFun.Data.csproj" />
     <ProjectReference Include="..\MediatrFun.Services\MediatrFun.Services.csproj" />
   </ItemGroup>
 

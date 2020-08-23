@@ -1,8 +1,8 @@
 ﻿using MediatrFun.Data.Models.Abstract;
 
-namespace MediatrFun.Data.Models.Tables
+namespace MediatrFun.Data.Models
 {
-    public class BookTable : BaseEntity
+    public class Book : BaseEntity
     {
         public string Name { get; set; }
     }
