@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace MediatrFun.Data.Repositories.Implementations
 {
-    public class BookRepository : IRepository<Book>
+    public class BookRepository : IBookRepository
     {
         private readonly DataContext _context;
 
@@ -27,9 +27,20 @@ namespace MediatrFun.Data.Repositories.Implementations
             return await _context.Books.SingleOrDefaultAsync(b => b.Id == id);
         }
 
-        public async Task<EntityEntry<Book>> Add(Book item)
+        public async Task<int> Add(Book item)
         {
-            return await _context.Books.AddAsync(item);
+            var book = new Book
+            {
+                Name = item.Name,
+                CreatedMoment = DateTime.UtcNow,
+                UpdatedMoment = DateTime.UtcNow
+            };
+            _context.Books.Add(book);
+            var Id = await _context.SaveChangesAsync();
+            return Id;
+
+
+
         }
 
         public async Task<Book> Update(Book item)

@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using MediatrFun.Data.Models;
+using MediatrFun.Data.Repositories;
+using MediatrFun.Data.Repositories.Implementations;
+using MediatrFun.Data.Repositories.Interfaces;
+using MediatrFun.Services.Books.Commands;
 using MediatrFun.Services.Books.Queries;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +34,10 @@ namespace MediatrFun.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<DataContext>();
+            
+            services.AddTransient<IBookRepository, BookRepository>();
 
             services.AddMediatR(typeof(GetAllBooksQuery).Assembly);
         }

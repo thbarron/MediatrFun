@@ -5,19 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Books\Handlers\GetAllBooksHandler.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Books\Handlers\GetAllBooksHandler.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MediatR" Version="8.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MediatrFun.Data\MediatrFun.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Books\Handlers\" />
   </ItemGroup>
 
 </Project>

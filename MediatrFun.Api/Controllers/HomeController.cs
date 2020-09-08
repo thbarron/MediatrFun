@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using MediatrFun.Data.Models;
+using MediatrFun.Services;
 using MediatrFun.Services.Books.Commands;
 using MediatrFun.Services.Books.Queries;
 using Microsoft.AspNetCore.Mvc;
@@ -25,13 +26,13 @@ namespace MediatrFun.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Book>> Index()
+        public async Task<Response<List<Book>>> Index()
         {
             return await _mediator.Send(new GetAllBooksQuery());
         }
 
         [HttpPost]
-        public async Task<string> Create([FromBody] CreateBookCommand command)
+        public async Task<Response<int>> AddBook([FromBody] CreateBookCommand command)
         {
             return await _mediator.Send(command);
         }

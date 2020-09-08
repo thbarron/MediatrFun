@@ -9,7 +9,7 @@ namespace MediatrFun.Data.Repositories.Interfaces
     {
         Task<IEnumerable<T>> GetAll();
         Task<T> Get(int id);
-        Task<EntityEntry<Book>> Add(T item);
+        Task<int> Add(T item);
         Task<T> Update(T item);
     }
 }
